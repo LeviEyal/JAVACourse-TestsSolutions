@@ -15,6 +15,8 @@ public class Question4 {
         System.out.println(numberApearance(t1, t2));
     }
     public static int numberApearance(String s1, String s2){
-        return (s1.length() - s1.replace(s2,"").length()) / s2.length();
+        int s1_size = s1.length();
+        int s1_without_s2_size = s1.replace(s2,"").length();
+        return (s1_size - s1_without_s2_size) / s2.length();
     }
 }

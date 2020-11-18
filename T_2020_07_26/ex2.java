@@ -1,3 +1,4 @@
+package src.T_2020_07_26;
 
 /********************************************************
 *  @author Eyal Levi
@@ -15,11 +16,10 @@ public class ex2 {
         int n = 0;
         int l = S.length() - 1; // the length of the string
         for (int i = 0; i <= l; i++) {
-            //if String representation illegal, return -1;
             if(S.charAt(i) != '0' && S.charAt(i) != '1')
                 return -1;
-            int dig = Integer.parseInt("" + S.charAt(i)); // the corrent digit
-            n += dig * (int) Math.pow(2, l - i);
+            int digit = Integer.parseInt("" + S.charAt(i)); 
+            n += digit * (int) Math.pow(2, l - i);
         }
         return n;
     }
@@ -31,7 +31,9 @@ public class ex2 {
         int gray[][] = new int[h][w]; // declaring the desired image's array
         for (int i = 0; i < h; i++)
             for (int j = 0; j < w; j++)
-                gray[i][j] = (int) (0.3 * imRGB[0][i][j] + 0.59 * imRGB[1][i][j] + 0.11 * imRGB[2][i][j]) * 255;
+                gray[i][j] = (int) (  0.30 * imRGB[0][i][j] 
+                                    + 0.59 * imRGB[1][i][j] 
+                                    + 0.11 * imRGB[2][i][j]) * 255;
         return gray;
     }
 

@@ -24,7 +24,8 @@ public class q3 {
     }
 
     private static boolean isSymX(int[][] a, int[][] b) {
-        if(a.length!=b.length || a[0].length!=b[0].length) return false;
+        if(a.length!=b.length || a[0].length!=b[0].length)
+            return false;
         int ah = a.length-1, bh = b.length-1;
         for (int i = 0; i <= ah ; i++) {
             if(!Arrays.equals(a[i], b[bh-i]))
@@ -34,7 +35,8 @@ public class q3 {
     }
     private static boolean isSymy(int[][] a, int[][] b) {
         int h = a.length, w = a[0].length;
-        if(b.length!=h || b[0].length!=w) return false;
+        if(b.length!=h || b[0].length!=w)
+            return false;
         for (int i = 0; i < h; i++)
             for (int j = 0; j < w; j++)
                 if(a[i][j] != b[i][w-j-1])

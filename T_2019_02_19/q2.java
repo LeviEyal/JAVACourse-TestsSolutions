@@ -23,7 +23,8 @@ public class q2 {
         return calcSumDiag(arr, 0);
     }
     private static int calcSumDiag(int[][] arr, int i) {
-        if(i==arr.length-1) return arr[i][i];
+        if(i==arr.length-1) 
+            return arr[i][i];
         return arr[i][i] + calcSumDiag(arr, i+1);
     }
 }

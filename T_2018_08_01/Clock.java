@@ -7,6 +7,7 @@ package src.T_2018_08_01;
 ********************************************************/
 
 public class Clock {
+
     private int minutes, hours;
 
     public Clock(int h, int m) {
@@ -45,9 +46,14 @@ public class Clock {
         return true;
     }
 
-    public String toString() { String output = ""; if (hours < 10) output = "0";
-    output = output + hours + ":";
-    if (minutes < 10) output = output + "0";
-    output = output + minutes; return output;
+    public String toString() {
+        String output = "";
+        if (hours < 10)
+            output = "0";
+        output = output + hours + ":";
+        if (minutes < 10)
+            output = output + "0";
+        output = output + minutes;
+        return output;
     }
 }

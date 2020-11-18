@@ -6,13 +6,12 @@ package src.T_2015_06_23;
 *  https://github.com/LeviEyal
 ********************************************************/
 
-public class TrIangle {
-
-    private double a;
-    private double b;
+public class Triangle {
+ 
+    private double a, b;
     private Point p;
 
-    public TrIangle(Point p, double a, double b) {
+    public Triangle(Point p, double a, double b) {
         this.p = new Point(p);
         this.a = a;
         this.b = b;
@@ -39,9 +38,6 @@ public class TrIangle {
     }
 
     public void setP(Point p) {
-        this.p = p;
-    }
-    
-
-    
+        this.p = new Point(p);
+    }  
 }

@@ -31,10 +31,41 @@ public class MyLinkedList {
         size++;
     }
     public void sort(){
-        for(Node i=head; i!=null; i=i.getNext()){
-            for(Node j=head; j!=null; j=i.getNext()){
-                
-            }
+        MyLinkedList sorted = new MyLinkedList();
+        Node p = head;
+        while(p != null){
+            Node temp = p.getNext();
+            sorted.addInPlace(p);
+            p = temp;
         }
+        this.head = sorted.head;
+    }
+    private void addInPlace(Node newnode){
+        if (head == null || head.getData() >= newnode.getData())  { 
+            newnode.setNext(head); 
+            head = newnode; 
+        } 
+        else { 
+            Node current = head; 
+            while( current.getNext() != null 
+                && current.getNext().getData() < newnode.getData())  { 
+                current = current.getNext(); 
+            } 
+            newnode.setNext(current.getNext());
+            current.setNext(newnode);
+        } 
+    }
+
+    public String toString() {
+        if (head == null)
+            return "[]";
+        String res = "[";
+        Node pointer = head;
+        while (pointer.getNext() != null) {
+            res = res + pointer.toString() + ", ";
+            pointer = pointer.getNext();
+        }
+        res = res + pointer.toString();
+        return res + "]";
     }
 }

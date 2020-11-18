@@ -23,4 +23,7 @@ public class Node {
     public void setNext(Node n){
         next = n;
     }
+    public String toString() { 
+        return "" + data;
+    }
 }

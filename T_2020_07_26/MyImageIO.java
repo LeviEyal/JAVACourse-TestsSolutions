@@ -1,3 +1,5 @@
+package src.T_2020_07_26;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

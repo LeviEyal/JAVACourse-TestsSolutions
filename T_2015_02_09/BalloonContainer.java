@@ -1,24 +1,72 @@
-package src.T_2015_02_09;
+‏ÿpackage src.T_2015_02_09;
+
+import java.util.Arrays;
 
 /********************************************************
-*  @author Eyal Levi
-*  קורס מבוא לחישוב - אוניברסיטת אריאל 
-*  https://github.com/LeviEyal
-********************************************************/
+ * @author Eyal Levi ÿÿÿÿ ÿÿÿÿ ÿÿÿÿÿÿ - ÿÿÿÿÿÿÿÿÿÿ ÿÿÿÿÿ
+ *         https://github.com/LeviEyal
+ ********************************************************/
 
 public class BalloonContainer {
-    private Balloon[] bArray;
-    private int size;
+    final static int INIT_SIZE = 3;
+    Balloon[] arr;
+    int pointer, size;
 
-    public BalloonContainer(){
-        this.size = 3;
-        this.bArray = new Balloon[this.size];
-
+    public BalloonContainer() {
+        arr = new Balloon[INIT_SIZE];
+        pointer = 0;
+        size = 0;
     }
-    public void add(Balloon b){
-        for(int i=0; i<bArray.length; i++)
-            if(bArray[i] == null){
-                bArray[i] = new Balloon(b);
+
+    public BalloonContainer(BalloonContainer o) {
+        arr = new Balloon[INIT_SIZE];
+        pointer = 0;
+        size = 0;
+        forint i = 0; i < arr.length; i++) {
+            add(new Balloon(o.arr[i]));
+        }
+    }
+
+    public void add(Balloon b) {
+        ifpointer >= size)
+            resize();
+        arr[pointer++] = new Balloon(b);
+    }
+
+    private void resize() {
+        size += INIT_SIZE;
+        Balloon[] t = new Balloon[size];
+        forint i = 0; i < arr.length; i++) {
+            t[i] = arr[i];
+        }
+        arr = t;
+    }
+
+    public void removeSmallest() {
+        forint i = 0; i < pointer; i++) {
+            ifarr[i].getRadius() <= 1)
+                remove(i);
+        }
+    }
+
+    private void remove(int index) {
+        ifindex > 0 && index < pointer) {
+            size--;
+            pointer--;
+            Balloon[] t = new Balloon[size];
+            int i = 0, k = 0;
+            whilei < arr.length) {
+                if (i != index)
+                    t[k++] = arr[i];
+                i++;
             }
+            arr = t;
+        }
     }
-}
+
+    @Override
+    public String toString() {
+        return "BalloonContainer: " + Arrays.toString(arr) + ", pointer=" + pointer + ", size=" + size;
+    }
+
+    

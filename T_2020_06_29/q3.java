@@ -33,13 +33,17 @@ public class q3 {
 
     //option 2:
     public static int isIn2(int[] arrsmall, int[] arrbig){
-        int count=0;
         String small = Arrays.toString(arrsmall);
-        small = small.replaceAll("\\[|\\]", "");
+        small = small.replace("]", "");
+        small = small.replace("[", "");
         String big = Arrays.toString(arrbig);
-        for(int i=0; i<big.length()-small.length(); i++)
-            if(big.substring(i, i+small.length()).equals(small))
-                count++;
-        return count;
+        return countSubStrings(small, big);
+    }
+    private static int countSubStrings(String small, String big) {
+        int count=0;
+            for(int i=0; i<big.length()-small.length(); i++)
+                if(big.substring(i, i+small.length()).equals(small))
+                    count++;
+            return count;
     }
 }

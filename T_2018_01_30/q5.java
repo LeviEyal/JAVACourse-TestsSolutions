@@ -9,7 +9,7 @@ package src.T_2018_01_30;
 public class q5 {
 
     public static void main(String[] args) {
-        mLinList ls = new mLinList();
+        MyLinkedList ls = new MyLinkedList();
         ls.add("a");
         ls.add("b");
         ls.add("c");

@@ -13,12 +13,12 @@ public class q3 {
     }
 
     private static String mergeStrings(String a, String b) {
-        String m = "";
+        String merged = "";
         for (int i = 0; i < a.length(); i++) {
             String c = ""+a.charAt(i);
-            if(b.contains(c) && !(m.contains(c)))
-                m+=c;
+            if(b.contains(c) && !(merged.contains(c)))
+                merged+=c;
         }
-        return m;
+        return merged;
     }
 }

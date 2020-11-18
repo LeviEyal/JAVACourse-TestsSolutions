@@ -6,12 +6,11 @@ package src.T_2018_01_30;
 *  https://github.com/LeviEyal
 ********************************************************/
 
-public class mLinList {
+public class MyLinkedList {
     Node head;
-    int mLinList;
     int size;
 
-    public mLinList() {
+    public MyLinkedList() {
         head = null;
         size = 0;
     }
@@ -28,6 +27,7 @@ public class mLinList {
         }
         size++;
     }
+    
 
     public String toString() {
         String ans = "[";
@@ -63,7 +63,8 @@ public class mLinList {
 
     //option 2
     public boolean swap2(int i, int j){
-        if(i<0 || j<0 || i>=size || j>=size) return false;
+        if(i<0 || j<0 || i>=size || j>=size) 
+            return false;
         String t = index(i).data;
         index(i).data = index(j).data;
         index(j).data = t;

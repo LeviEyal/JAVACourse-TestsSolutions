@@ -1,4 +1,8 @@
-/** this class represent a 2d point in the plane. <br>*/
+package src.T_2020_07_26;
+
+/**
+ * this class represent a 2d point in the plane. <br>
+ */
 public final class Point {
     // ******** private data members ********
         private double _x, _y;  // we "mark" data members of the classusing.

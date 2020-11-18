@@ -13,26 +13,26 @@ public class WorldTimes {
     private static int numOfObjects=0;
 
     public WorldTimes(int n){
-        this.numOfClocks=n;
-        this.clockArray = new Clock[n];
+        numOfClocks=n;
+        clockArray = new Clock[n];
         for(int i=0; i<n; i++)
             clockArray[i] = new Clock(i,0);
         numOfObjects++;
     }
     public WorldTimes(WorldTimes otherWT){
-        this.clockArray = new Clock[otherWT.getNumOfClocks()];
-        this.numOfClocks = otherWT.getNumOfClocks();
-        for(int i=0; i<this.numOfClocks; i++)
-            this.clockArray[i] = new Clock(otherWT.getTimeIndex(i));
+        clockArray = new Clock[otherWT.getNumOfClocks()];
+        numOfClocks = otherWT.getNumOfClocks();
+        for(int i=0; i<numOfClocks; i++)
+            clockArray[i] = new Clock(otherWT.getTimeIndex(i));
         numOfObjects++;
     }
     public Clock getTimeIndex(int i){
-        if(i<0 || i>this.numOfClocks) return null;
-        return this.clockArray[i];
+        if(i<0 || i>numOfClocks) return null;
+        return clockArray[i];
     }
     public void addOne(){
-        for(int i=0; i<this.numOfClocks; i++){
-            this.clockArray[i].setHours(this.clockArray[i].getHours()+1);
+        for(int i=0; i<numOfClocks; i++){
+            clockArray[i].setHours(clockArray[i].getHours()+1);
         }
     }
     public static int getNumOfObjects(){

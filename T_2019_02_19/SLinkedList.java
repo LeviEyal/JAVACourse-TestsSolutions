@@ -7,14 +7,21 @@ package src.T_2019_02_19;
 ********************************************************/
 
 public class SLinkedList {
+    //Class fields
     Node head;
     int size;
 
+    //Constructor
     public SLinkedList() {
         head = null;
         size = 0;
     }
 
+    /* METHODS: */
+    //adding
+    //removing
+
+}
     public void addLast(String element) {
         if (head == null)
             head = new Node(element);
@@ -43,7 +50,7 @@ public class SLinkedList {
     public void removeDuplicate(){
         for(Node i=head; i!=null; i=i.next)
             for(Node j=i.next; j!=null; j=j.next)
-                if(i.data.compareTo(j.data)==0)
+                if(i.data.equals(j.data))
                     remove(j);
     }
     public void remove(Node j){

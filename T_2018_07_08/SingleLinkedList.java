@@ -23,22 +23,11 @@ class Node {
     public String toString() { 
         return "" + data;
     }
-
-	public void setNext(Object object) {
-	}
-
-	public Node getNext() {
-		return null;
-	}
-
-	public String getData() {
-		return null;
-	}
 }
 
 public class SingleLinkedList {
-    private Node head;
-    private int size;
+    Node head;
+    int size;
 
     public SingleLinkedList() {
         head = null;
@@ -49,23 +38,21 @@ public class SingleLinkedList {
         Node newNode = new Node(num);
         if(head == null){
             head = newNode;
-            return;
         }
-        if(num<head.data){
+        else if(num < head.data){
             Node t = head;
             head = newNode;
             newNode.next = t;
-            return;
         }
-        for(Node p=head ; p!=null ; p=p.next){
-            if(p.next==null || p.next.data>num){
-                Node t = p.next;
-                p.next = newNode;
-                newNode.next = t;
-                return;
+        else{
+            for(Node p=head ; p!=null ; p=p.next){
+                if(p.next == null || p.next.data > num){
+                    Node t = p.next;
+                    p.next = newNode;
+                    newNode.next = t;
+                }
             }
         }
-
     }
 
     public String toString() {
@@ -80,9 +67,4 @@ public class SingleLinkedList {
         res = res + pointer.toString();
         return res + "]";
     }
-
-    public int getSize() {
-        return size;
-    }
-
 }

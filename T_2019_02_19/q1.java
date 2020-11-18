@@ -18,8 +18,11 @@ public class q1 {
         for (int i = 2; i < n; i++)
             for (int j = 2; j < n; j++)
                 for (int k = 2; k < n; k++)
-                    if(isPrime(i)&&isPrime(k)&&isPrime(j)&& i!=j&& j!=k &&i!=k)
-                        if(i*j*k==n) return true;
+                    if(isPrime(i)&&isPrime(k)&&isPrime(j)
+                        && i!=j && j!=k && i!=k){
+                            if(i*j*k==n) 
+                                return true;
+                        }
         return false;
     }
     public static boolean isPrime(int n){

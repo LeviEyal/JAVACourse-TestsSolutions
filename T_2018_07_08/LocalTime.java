@@ -11,17 +11,17 @@ public class LocalTime {
     private int rat;
     private Clock clk;
 
-    public LocalTime(String city, int rat, Clock clk) {
-        this.city = city;
-        if(rat<=12 && rat>= -12)
-            this.rat = rat;
-        else this.rat = 0;
-        this.clk = new Clock(clk);
+    public LocalTime(String n, int r, Clock c) {
+        city = n;
+        if(r<=12 && r>= -12)
+            rat = r;
+        else rat = 0;
+        clk = new Clock(c);
     }
     public LocalTime(LocalTime other) {
-        this.city = other.getCity();
-        this.rat = other.getRat();
-        this.clk = new Clock(other.getClk()); 
+        city = other.getCity();
+        rat = other.getRat();
+        clk = new Clock(other.getClk()); 
     }
     public String toString() {
         String c = rat<0? "":"+";
@@ -34,23 +34,10 @@ public class LocalTime {
         boolean d = this.clk.getMinutes()==other.clk.getMinutes();
         return a && b && c && d;
     }
-    public String getCity() {
-        return city;
-    }
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public int getRat() {
-        return rat;
-    }
-    public void setRat(int rat) {
-        this.rat = rat;
-    }
-    public Clock getClk() {
-        return clk;
-    }
-    public void setClk(Clock clk) {
-        this.clk = clk;
-    }
-    
+    public String getCity() {return city;}
+    public void setCity(String city) {this.city = city;}
+    public int getRat() {return rat;}
+    public void setRat(int rat) {this.rat = rat;}
+    public Clock getClk() {return clk;}
+    public void setClk(Clock clk) {this.clk = clk;}
 }
