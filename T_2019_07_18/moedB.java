@@ -1,5 +1,11 @@
 package src.T_2019_07_18;
 
+/*****************************************************************
+*  @author Eyal Levi
+*  קורס מבוא לחישוב - אוניברסיטת אריאל
+*  https://github.com/LeviEyal
+******************************************************************/
+
 public class moedB{
     public static void main(String[] args) {
         int a = 8;

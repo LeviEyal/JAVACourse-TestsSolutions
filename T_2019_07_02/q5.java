@@ -2,6 +2,12 @@ package src.T_2019_07_02;
 
 import java.util.Arrays;
 
+/*****************************************************************
+*  @author Eyal Levi
+*  קורס מבוא לחישוב - אוניברסיטת אריאל
+*  https://github.com/LeviEyal
+******************************************************************/
+
 public class q5 {
 
     public static int[] mystery(int a[], int n) {

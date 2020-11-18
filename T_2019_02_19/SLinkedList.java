@@ -1,27 +1,21 @@
 package src.T_2019_02_19;
 
-/********************************************************
+/*****************************************************************
 *  @author Eyal Levi
-*  χεψρ ξαεΰ μηιωεα - ΰεπιαψριθϊ ΰψιΰμ 
+*  Χ§Χ•Χ¨Χ΅ ΧΧ‘Χ•Χ ΧΧ—Χ™Χ©Χ•Χ‘ - ΧΧ•Χ Χ™Χ‘Χ¨Χ΅Χ™ΧΧª ΧΧ¨Χ™ΧΧ
 *  https://github.com/LeviEyal
-********************************************************/
+******************************************************************/
 
 public class SLinkedList {
-    //Class fields
+
     Node head;
     int size;
 
-    //Constructor
     public SLinkedList() {
         head = null;
         size = 0;
     }
 
-    /* METHODS: */
-    //adding
-    //removing
-
-}
     public void addLast(String element) {
         if (head == null)
             head = new Node(element);

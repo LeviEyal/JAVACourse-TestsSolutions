@@ -2,11 +2,11 @@ package src.T_2018_Sample;
 
 import java.util.Arrays;
 
-/********************************************************
+/*****************************************************************
 *  @author Eyal Levi
-*  ÷åøñ îáåà ìçéùåá - àåğéáøñéèú àøéàì 
+*  ×§×•×¨×¡ ××‘×•× ×œ×—×™×©×•×‘ - ××•× ×™×‘×¨×¡×™×˜×ª ××¨×™××œ
 *  https://github.com/LeviEyal
-********************************************************/
+******************************************************************/
 
 public class PointContainer {
 	public static final int INIT_SIZE=10;
@@ -46,11 +46,11 @@ public class PointContainer {
     public Point[] maxIn(Rectangle[] arr){
         Point t[] = new Point[size()];
         int count=0, count2=0;
-        for (int i = 0; i < size(); i++) { //   îòáø ğ÷åãä ğ÷åãä
+        for (int i = 0; i < size(); i++) { //   ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
             double x0 = _points[i].x();
             double y0 = _points[i].y();
 			count=0;
-            for (int j = 0; j < arr.length; j++) { //   îòáø îìáï îìáï
+            for (int j = 0; j < arr.length; j++) { //   ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				double x1 = arr[j].getP1().x(), y1 = arr[j].getP1().y();
                 double x2 = arr[j].getP2().x(), y2 = arr[j].getP2().y(); 
                 if(x0<x1 || x0>x2 || y0<y1 || y0>y2){

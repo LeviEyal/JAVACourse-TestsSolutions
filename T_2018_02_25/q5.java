@@ -1,5 +1,11 @@
 package src.T_2018_02_25;
 
+/*****************************************************************
+*  @author Eyal Levi
+*  קורס מבוא לחישוב - אוניברסיטת אריאל
+*  https://github.com/LeviEyal
+******************************************************************/
+
 public class q5 {
     public static void main(String[] args) {
         MyLinkedList t = new MyLinkedList();

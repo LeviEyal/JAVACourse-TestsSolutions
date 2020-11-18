@@ -1,15 +1,17 @@
 package src.T_2015_07_21;
 
-/********************************************************
+/*****************************************************************
 *  @author Eyal Levi
-*  χεψρ ξαεΰ μηιωεα - ΰεπιαψριθϊ ΰψιΰμ 
+*  Χ§Χ•Χ¨Χ΅ ΧΧ‘Χ•Χ ΧΧ—Χ™Χ©Χ•Χ‘ - ΧΧ•Χ Χ™Χ‘Χ¨Χ΅Χ™ΧΧª ΧΧ¨Χ™ΧΧ
 *  https://github.com/LeviEyal
-********************************************************/
+******************************************************************/
 
 public class Question3 {
 
     public static void main(String[] args) {
+        //option 1:
         System.out.println(firstPrimesInFibonacci2(7));
+        //option 2:
         System.out.println(firstPrimesInFibonacci(7));
     }
     //option 1
@@ -44,18 +46,4 @@ public class Question3 {
             if(t%i == 0) return false;
         return true;
     }
-
-
-    // //option 3
-    // public static int fib(int n){
-    //     if (n <= 1) return n; 
-    //     return isPrime2(fib(n-1) + fib(n-2)) + isPrime2(fib(n-1) + fib(n-2)) ;
-    // }
-    // private static int isPrime2(int t) {
-    //     if(t==1) return 0;
-    //     for (int i = 2; i <= Math.sqrt(t); i++)
-    //         if(t%i == 0) return 0;
-    //     return 1;
-    // }
-    
 }

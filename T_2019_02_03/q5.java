@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
 
+/*****************************************************************
+*  @author Eyal Levi
+*  קורס מבוא לחישוב - אוניברסיטת אריאל
+*  https://github.com/LeviEyal
+******************************************************************/
+
 public class q5 {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<Integer>();
